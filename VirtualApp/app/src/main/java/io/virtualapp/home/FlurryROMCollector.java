@@ -3,9 +3,9 @@ package io.virtualapp.home;
 import android.hardware.Camera;
 import android.os.Build;
 import android.util.Log;
-
-import com.flurry.android.FlurryAgent;
-import com.flurry.android.FlurryEventRecordStatus;
+//
+//import com.flurry.android.FlurryAgent;
+//import com.flurry.android.FlurryEventRecordStatus;
 import com.lody.virtual.client.natives.NativeMethods;
 import com.lody.virtual.helper.utils.Reflect;
 
@@ -33,9 +33,9 @@ public class FlurryROMCollector {
     private static void reportCameraNativeSetup() {
         for (Method method : Camera.class.getDeclaredMethods()) {
             if ("native_setup".equals(method.getName())) {
-                FlurryEventRecordStatus status =
-                        FlurryAgent.logEvent("camera::native_setup", createLogContent("method_details", Reflect.getMethodDetails(method)));
-                Log.d(TAG, "report CNS: " + status);
+//                FlurryEventRecordStatus status =
+//                        FlurryAgent.logEvent("camera::native_setup", createLogContent("method_details", Reflect.getMethodDetails(method)));
+//                Log.d(TAG, "report CNS: " + status);
                 break;
             }
         }

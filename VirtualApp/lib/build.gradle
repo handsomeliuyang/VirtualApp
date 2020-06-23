@@ -30,6 +30,8 @@ android {
         //IJobService need NewApi
         warning 'NewApi','OnClick'
     }
+    // 低版本的ndk才能编译通过
+    ndkVersion '16.1.4479499'
 }
 
 
